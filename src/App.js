@@ -1,26 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      a: 0,
+    };
+  }
+  hanlder = ()=>{
+    if(this.state.a < 10){
+      this.setState({
+        a:this.state.a + 1
+      })
+    }
+  }
+  render() {
+    return(
+      <div>
+        this is my first component
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          {this.state.a}
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+        <button onMouseMove = {this.hanlder}>点我哟</button>
+      </div>
+    )
+  }
 }
-
 export default App;
