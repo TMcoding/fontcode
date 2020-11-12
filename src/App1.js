@@ -13,9 +13,9 @@ const columns = [
     render: text => <a>{text}</a>,
   },
   {
-    title: 'Age',
-    dataIndex: 'age',
-    key: 'age',
+    title: 'sex',
+    dataIndex: 'sex',
+    key: 'sex',
   },
   {
     title: 'Address',
